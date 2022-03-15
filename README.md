@@ -34,4 +34,10 @@ consultar itens pelo id e pelo name, listar itens, criar itens, atualizar itens 
  
 
 Passo 7: Para parar de executar a API pressione CTRL+C no terminal.
+
+
+
+REFERÊNCIAS
+
+Data Hackers: https://medium.com/data-hackers/como-criar-a-sua-primeira-api-em-python-com-o-fastapi-50b1d7f5bb6d
 		
