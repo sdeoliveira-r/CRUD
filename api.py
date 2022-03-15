@@ -2,7 +2,7 @@ from typing import Optional
 from pydantic import BaseModel
 from fastapi import FastAPI, Path
 
-
+# Base de dados
 app = FastAPI()
 
 menu = [
@@ -32,12 +32,12 @@ class UpdateItem(BaseModel):
 	name: Optional[str] = None
 	price: Optional[float] = None
 
-
+# Hello World
 @app.get("/")
 def hello_word_root():
 	return {"Hello": "World"}
 
-
+# Obter item pelo id, método GET
 @app.get('/get-item/{item_id}')
 def get_item(
 	item_id: int = Path(
@@ -51,6 +51,7 @@ def get_item(
 
 	return {'Item': search[0]}
 
+# Obter item pelo nome, método GET
 @app.get('/get-by-name')
 def get_item(name: Optional[str] = None):
 
@@ -61,10 +62,12 @@ def get_item(name: Optional[str] = None):
 
 	return {'Item': search[0]}
 
+# Listar itens, método GET
 @app.get('/list-menu')
 def listar():
 	return {'Menu': menu}
 
+# Criar item, método POST
 @app.post('/create-item/{item_id}')
 def create_item(item_id: int, item: Item):
 
@@ -79,6 +82,7 @@ def create_item(item_id: int, item: Item):
 	menu.append(item)
 	return item
 
+# Atualizar item, método PUT
 @app.put ('/update-item/{item_id}')
 def update_item(item_id: int, item: UpdateItem):
 
@@ -95,6 +99,7 @@ def update_item(item_id: int, item: UpdateItem):
 
 	return search
 
+# Deletar item, método DELETE
 @app.delete('/delete-item/{item_id}')
 def delete_item(item_id: int):
 
