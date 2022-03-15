@@ -19,8 +19,8 @@ Server Gateway Interface) e rodar no navegador a FastAPI;
 
 	uvicorn api:app --reload
 
-Passo 4: Faça algumas requisições direto do navegador acessando o endereço <http://127.0.0.1:8000> p
-or exemplo;
+Passo 4: Faça algumas requisições direto do navegador acessando o endereço <http://127.0.0.1:8000>
+por exemplo;
 
 	http://127.0.0.1:8000/get-item/1
 	http://127.0.0.1:8000/get-by-name?name=coffe
