@@ -24,6 +24,10 @@ menu = [
 	}
 ]
 
+# BaseModel do pydantic (biblioteca para validação de dados e gerenciamento 
+# de configurações, utiliza as anotações de tipo do próprio Python. Ela força 
+# as anotações de tipos do Python em tempo de execução e provê as respectivas 
+# mensagens de erro de sua violação)
 class Item(BaseModel):
 	name: str
 	price: float
